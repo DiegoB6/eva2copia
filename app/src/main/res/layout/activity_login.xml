@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradiente">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="@color/indigo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mi salud"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            style="?attr/materialIconButtonStyle"
+            android:id="@+id/flechaLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/back_arrow"
+            app:iconTint="@color/black"
+            android:contentDescription="atrasMenu"
+            app:iconSize="40dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/tvH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesion"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese su nombre"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginTop="180dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="50dp"
+        android:paddingVertical="10dp"
+        />
+    <EditText
+        android:id="@+id/etContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese su contraseña"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre"
+        android:background="@color/white"
+        android:layout_marginHorizontal="50dp"
+        android:paddingVertical="10dp"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnIniciarSesion"
+
+        android:backgroundTint="@color/indigo"
+        android:textColor="@color/black"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp"
+
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etContraseña"
+        android:layout_marginBottom="150dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSalirLogin"
+
+        android:textColor="@color/white"
+        android:backgroundTint="@color/red"
+        app:strokeWidth="2dp"
+
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnIniciarSesion"
+        android:layout_marginBottom="0dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
