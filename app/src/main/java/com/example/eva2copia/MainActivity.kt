@@ -19,22 +19,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val btnPantallaCrud: Button = findViewById(R.id.btnCrud)
+        val btnBotonLogin: Button = findViewById(R.id.btnCambiarLogin)
 
-        btnPantallaCrud.setOnClickListener{
-            val intent = Intent(this, crud::class.java)
+        btnBotonLogin.setOnClickListener{
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
 
         }
 
 
-        val btnPantallaMenu: Button = findViewById(R.id.btnMenu)
-
-        btnPantallaMenu.setOnClickListener{
-            val intent = Intent(this, menu::class.java)
-            startActivity(intent)
-
-        }
 
 
     }

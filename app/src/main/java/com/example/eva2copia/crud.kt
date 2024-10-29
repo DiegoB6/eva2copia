@@ -74,6 +74,13 @@ class crud : AppCompatActivity(), PulsacionesAdapter.OnItemClickListener {
             startActivity(intent)
 
         }
+        val btnVolverCRUD: Button = findViewById(R.id.btnVolverCRUD)
+
+        btnVolverCRUD.setOnClickListener{
+            val intent = Intent(this, menu::class.java)
+            startActivity(intent)
+
+        }
 
     }
 

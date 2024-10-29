@@ -2,6 +2,7 @@ package com.example.eva2copia
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,22 @@ class menu : AppCompatActivity() {
 
         btnPulso.setOnClickListener{
             val intent = Intent(this, crud::class.java)
+            startActivity(intent)
+
+        }
+
+        val flechaMenu: Button = findViewById(R.id.btnAtrasLogin)
+
+        flechaMenu.setOnClickListener{
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+
+        }
+
+        val atrasMenu: Button = findViewById(R.id.btnCerrar)
+
+        atrasMenu.setOnClickListener{
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
 
         }

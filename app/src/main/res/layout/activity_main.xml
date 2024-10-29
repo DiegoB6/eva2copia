@@ -5,48 +5,97 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/gradiente"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="@color/indigo"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mi salud"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
+        android:id="@+id/tvManual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Manual de Uso"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="10dp"
+        />
 
-    <Button
-        android:id="@+id/btnCrud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ingresar"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
 
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCambiarLogin"
 
         android:backgroundTint="@color/indigo"
         android:textColor="@color/black"
         app:strokeColor="@color/black"
         app:strokeWidth="2dp"
-        />
 
-    <Button
-        android:id="@+id/btnMenu"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="52dp"
-        android:backgroundTint="@color/indigo"
-        android:text="Menu"
-        android:textColor="@color/black"
-
-
+        android:text="Iniciar Sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="@color/black"
-        app:strokeWidth="2dp" />
+        android:layout_marginBottom="20dp"
+        />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvManual"
+        android:layout_margin="15dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="1.) Inicio de Sesion: Al presionar el boton lleva a un formulario donde se debe ingresar el nombre de usuario y contraseña, el usuario por defecto es usuario1 y contraseña 123456, el cual no se puede cambiar. Luego en la pate inferior se encuentran dos botones, uno para iniciar sesion y el otro para volver a esta pantalla.
+            \n2.) Menu: Al presionar el boton de iniciar sesion lleva a la pantalla de menu donde se pueden seleccionar dos opciones: ir a mis pulsaciones para gestionar su salud y volver para regresar al inicio de sesion
+            \n3.) Mis Pulsaciones: En esta pantalla, para ingresar pulsaciones se deben escribir solo numeros enteros y pulsar el boton, una vez ingresado aparecera un boton para eliminar y el boton para editar, el cual luego de presionarlo se debe ingresar el nuevo numero reemplazando al antiguo y presionar nuevamente el boton ingresar. Ademas de un boton para volver al menu"
+            android:textColor="#000000"
+            android:textSize="16sp"
+
+
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
