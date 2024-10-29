@@ -24,7 +24,7 @@
             android:id="@+id/tvTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mi salud"
+            android:text="@string/mi_salud"
             android:textSize="40sp"
             android:textStyle="bold"
             android:layout_gravity="center"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             app:icon="@drawable/back_arrow"
             app:iconTint="@color/black"
-            android:contentDescription="atrasMenu"
+            android:contentDescription="@string/atrasmenu"
             app:iconSize="40dp"
             />
 
@@ -48,7 +48,7 @@
         android:id="@+id/tvH2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar Sesion"
+        android:text="@string/iniciar_sesion"
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -62,24 +62,30 @@
         android:id="@+id/etNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese su nombre"
+        android:hint="@string/ingrese_su_nombre"
         android:textSize="30sp"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         android:layout_marginTop="180dp"
         android:background="@color/white"
         android:layout_marginHorizontal="50dp"
         android:paddingVertical="10dp"
+
+        android:importantForAutofill="no"
+        tools:ignore="TextFields"
         />
     <EditText
         android:id="@+id/etContraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese su contraseña"
+        android:hint="@string/ingrese_su_contrase_a"
         android:textSize="30sp"
         app:layout_constraintTop_toBottomOf="@+id/etNombre"
         android:background="@color/white"
         android:layout_marginHorizontal="50dp"
         android:paddingVertical="10dp"
+
+        android:importantForAutofill="no"
+        tools:ignore="TextFields"
         />
 
 
@@ -94,7 +100,7 @@
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar Sesion"
+        android:text="@string/iniciar_sesion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +118,7 @@
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Salir"
+        android:text="@string/salir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
